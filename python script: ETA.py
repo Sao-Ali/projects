@@ -4,11 +4,11 @@ from twilio.rest import Client
 
 def get_commute_duration():
     # Define your home and work locations
-    home_address = '814 S goldenwest ave'
+    home_address = 'home'
     UCI_address = '653 E Peltason Dr, Irvine, CA 92617'
 
     # Set up Google Maps API client
-    google_maps_api_key = 'YOUR_GOOGLE_MAPS_API_KEY'
+    google_maps_api_key = 'XXXXXXXXXXXXXXXXXXXXX'
     gmaps = googlemaps.Client(key=google_maps_api_key)
 
     # Get the directions
@@ -20,10 +20,10 @@ def get_commute_duration():
 
 def send_twilio_message(message):
     # Set up Twilio client
-    twilio_account_sid = 'AC776b05ee68e29efc058c155feedafdb0'
-    twilio_auth_token = '03de3746eeef98eb0ca470c54a22f407'
+    twilio_account_sid = 'XXXXXXXXXXXXXXXXXXXXXXXXXX'
+    twilio_auth_token = 'XXXXXXXXXXXXXXXXXXXXX'
     twilio_phone_number = '+18444960233'
-    your_phone_number = '+15622560610'
+    your_phone_number = '+XXXXXXXXXXXXXXXXXX'
     client = Client(twilio_account_sid, twilio_auth_token)
 
     client.messages.create(
